@@ -156,7 +156,7 @@ button {
   .header-nav {
     align-items: center;
     display: flex;
-    padding: 24px 0;
+    
   }
 
   .header-logo {
@@ -228,7 +228,6 @@ button {
 @media screen and (min-width: 1158px) {
   .header-logo {
     margin-right: 76px;
-    margin-left: 156px;
   }
 
   .contacts-list {
@@ -254,7 +253,9 @@ button {
   }
 }
 
-/*mobile menu*/
+/* #endregion */
+/* #region mobail-menu */
+/*mobail menu*/
 .mobail-menu {
   position: fixed;
   top: 0;
@@ -302,12 +303,11 @@ button {
     display: none;
   }
 }
-
 /* #endregion */
 /* #region hero */
 .hero {
   background: #2e2f42;
-  max-width: 1440px;
+  max-width: 320px;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -330,7 +330,14 @@ button {
   margin: 0 auto;
   max-width: 496px;
   margin-bottom: 72px;
+  
 }
+@media screen and (max-width: 768px){
+  .hero-title{
+    width: 216px;
+  }
+}
+
 
 .hero-button {
   line-height: 150%;
@@ -369,12 +376,14 @@ button {
 
   .hero {
     padding: 112px 0;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
+    max-width: 1158px;
   }
   .hero-title {
     margin-bottom: 48px;
@@ -446,13 +455,16 @@ button {
 
 @media screen and (min-width: 768px) {
   .target-itm {
-    width: calc((100% - 72px) / 2);
+    width: calc((100% - 24px) / 2);
   }
   .target-list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 72px 24px;
+  }
+  .target-desc{
+    text-align: left;
   }
 }
 
@@ -481,6 +493,12 @@ button {
     align-items: center;
     margin-bottom: 8px;
   }
+  .target-desc{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
 
   .target-text {
     font-weight: 400;
@@ -491,7 +509,6 @@ button {
   }
 }
 /* #endregion */
-
 /* #region gallery */
 .gallery {
   background: #f4f4fd;
@@ -508,6 +525,11 @@ button {
   text-transform: capitalize;
   margin-bottom: 72px;
 }
+
+.gallery-img{
+  width: 100%;
+}
+
 
 .gallery-item {
   background-color: #ffffff;
@@ -584,12 +606,15 @@ button {
 
 @media screen and (min-width: 768px) {
   .gallery-item {
+    width: 264px;
     background-color: #ffffff;
     width: calc((100% - 24px * 9) / 2);
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
+
+ 
 
   .gallery-list {
     display: flex;
@@ -612,6 +637,7 @@ button {
   }
 
   .gallery-item {
+
     background-color: #ffffff;
     width: calc((100% - 3 * 24px) / 4);
     border-radius: 0px 0px 4px 4px;
@@ -656,9 +682,10 @@ button {
   font-size: 16px;
 }
 
-.portfolio-item {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+
+.portfolio-item-conteiner {
+  padding: 32px 16px;
 }
 
 .overlay {
@@ -744,6 +771,10 @@ button {
   text-align: center;
 }
 
+.footer-container-logo{
+  margin-bottom: 72px;
+}
+
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -769,6 +800,10 @@ button {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 288px;
+ 
+}
+
+.footer-container-svg{
   margin-bottom: 72px;
 }
 
@@ -784,7 +819,7 @@ button {
   display: inline-flex;
   gap: 16px;
   text-align: center;
-  margin-bottom: 72px;
+ 
 }
 
 .footer-svg-item {
@@ -926,7 +961,8 @@ button {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
+  }
 
 .modal-overlay.is-open {
   opacity: 1;
